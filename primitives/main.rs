@@ -6,7 +6,6 @@ fn type_of<T>(_: T) -> &'static str {
 }
 
 fn main() {
-  //println!("false {}", type_of(false));
 
   //println!("1 {}", type_of(1));
 
@@ -21,6 +20,8 @@ fn main() {
   let default_integer = 4;
   println!("default_integer {} {}", default_integer, type_of(default_integer));
   */
+
+  //println!("false {}", type_of(false));
 
   //println!("\u{2705} {}", type_of('\u{2705}'));
 
