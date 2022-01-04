@@ -9,6 +9,8 @@ fn main() {
   //println!("1 {}", type_of(1));
   //println!("false {}", type_of(false));
 
+  //println!("\u{2705} {}", type_of('\u{2705}'));
+
   /*
   let a_float: f64 = 1.0;
   println!("a_float {}", type_of(a_float));
@@ -31,11 +33,11 @@ fn main() {
   println!("default_integer {} {}", default_integer, type_of(default_integer));
   */
 
+
   /*
   let mut inferred_type = 12; // Type i64 is inferred from another line
   println!("inferred_type (mutable) {} {}", inferred_type, type_of(inferred_type));
   */
-  // inferred_type = 5_000_000_000;
 
-  // println!("{}", type_of([1,2,3].len()));
+  //inferred_type = 5_000_000_000i64;
 }
