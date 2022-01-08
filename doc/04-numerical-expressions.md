@@ -37,9 +37,6 @@ Exercises:
 
    Hint: write a main function to pass these parameters to the supplied function.
 
-2. What is the naming [convetion](https://github.com/rust-lang/rfcs/blob/master/text/0430-finalizing-naming-conventions.md) for Rust functions known as?
-
 [details="Answer"]
 1. 7578338
-2. "snake case"
 [/details]

@@ -1,6 +1,8 @@
 **Data Types**
 
-Rust is a strongly and statically typed language. This means that the type of a variable cannot be changed once it is defined, and the Rust compiler must be able to know the types when the programme is compiled.
+Rust is a strongly and statically typed language. This means that the Rust compiler must be able to know the types when the programme is compiled, and type behaviours are enforced more strictly so that programmes are unlikely to suffer from subtle type conversion errors. It also means that you will spend more time pre-emptively fixing these errors than a language that is more relaxed about types.
+
+For more on achieving correctness through types, and other approaches, read Bruce Eckel's article: _Strong Typing versus Strong Testing_.
 
 Here are some examples of primitives, or _scalar_ types, which represent a single value: a number (which can be an integer, without a fractional part), a floating point number, a character, or a boolean value (_true_ or _false_).
 
@@ -75,10 +77,13 @@ Exercises:
 
 1. If we knew we didn't need to handle negative numbers, which type should we use instead of `i64`
 2. In some cases, Rust uses an architecture-dependent type; what is the type of `[1,2,3].len()` ?
-3. Update your programme to print the Emoji corresponding to Unicode character `1F44F`
+3. What is the naming [convetion](https://github.com/rust-lang/rfcs/blob/master/text/0430-finalizing-naming-conventions.md) for Rust functions known as?
+4. Update your programme to print the Emoji corresponding to Unicode character `1F44F`
+
 
 [details="Answers"]
 1. u64
 2. usize
-3. :clap: 
+3. snake case
+4. :clap: 
 [/details]
