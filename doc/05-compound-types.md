@@ -42,7 +42,7 @@ Exercises:
 }
   ``` 
 
-  Can you fix this by converting the sum of squares to a floating point value? Hint: *integer_value as f32* is one option. 
+  Can you fix this calculation of the Pythagorean distance by converting the sum of squares to a floating point value? Hint: *integer_value as f32* is one option. 
 
   What is the length of the line between the two points?
 
