@@ -73,6 +73,8 @@ In this last example, uncomment the block comment, which defines and prints the 
 
 The underscores make it easier to read large numbers. 
 
+_Note: The type suffix may come as a surprise, particurly if you've come from a language like [Java](https://docs.oracle.com/javase/specs/jls/se7/html/jls-5.html). We go into more detail on how to convert between types in a later section._
+
 Exercises:
 
 1. If we knew we didn't need to handle negative numbers, which type should we use instead of `i64`
