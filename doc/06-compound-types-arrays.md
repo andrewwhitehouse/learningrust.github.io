@@ -1,4 +1,4 @@
-**Compounds Types - Arrays**
+**Compounds Types - Arrays (V2)**
 
 Arrays in Rust have a fixed length, and are allocated on the stack. A related type is the _vector_ which can grow or shrink dynamically.
 
@@ -16,9 +16,7 @@ let days_in_month: [u8; 12] = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
 The array type is specified as: ```[<element type>; <number of elements]```
 
-Let's do something useful with this data.
-
-This code populates an array with Fibonacci numbers.
+The code below populates an array with [Fibonacci](https://en.wikipedia.org/wiki/Fibonacci_number) numbers. It uses a _for_ loop to do this, which will be described in more detail in the later chapter.
 
 ```
 fn fibonacci() -> [u64; 90] {
@@ -45,6 +43,3 @@ Exercises:
 2. 1.61803398875; the ratio of consecutive elements in the Fibonacci sequence tends towards this number, known as the [Golden Ratio](https://en.wikipedia.org/wiki/Golden_ratio) which has been studied for a long time and appears in art, architecture and nature.
 3. 3928413764606871165730
 [/details]   
-
-
-
