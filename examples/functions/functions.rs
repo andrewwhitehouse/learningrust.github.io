@@ -1,11 +1,7 @@
-fn add(a: i32, maybe_b: Option<i32>, maybe_c: Option<i32>) -> i32{
-  let b = if maybe_b.is_none() { 0 } else { maybe_b.unwrap() };
-  let c = if maybe_c.is_none() { 0 } else { maybe_c.unwrap() };
-  a + b + c
+fn overeningeered_add(a: u32, b: u32) -> u32 {
+  if b == 0 { a } else { add(a+1, b-1) }
 } 
 
 fn main() {
-  println!("{}", add(3, None, None));
-  println!("{}", add(3, Some(8), None));
-  println!("{}", add(3, Some(8), Some(6)));
+  println!("{}", overengineered_add(123, 456));
 }
