@@ -21,6 +21,6 @@ fn fib_iter(n: usize) -> u64 {
 
 fn main() {
   for n in 0..=25 {
-    println!("{} {}", n, fib_iter(n))
+    println!("{} {}", n, fib_recur(n))
   }
 }
