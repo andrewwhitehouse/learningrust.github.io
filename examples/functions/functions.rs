@@ -1,7 +1,17 @@
-fn overeningeered_add(a: u32, b: u32) -> u32 {
-  if b == 0 { a } else { add(a+1, b-1) }
-} 
+fn fib(n: usize) -> u64 {
+    if n == 0 {
+       return 0
+    }
+    let mut a: u64 = 0;
+    let mut b: u64 = 1;
+    for _index in 2..n {
+        let tmp = b;
+        b = a + b;
+        a = tmp;
+    }
+    b
+}
 
 fn main() {
-  println!("{}", overengineered_add(123, 456));
+  println!("{}", fib(25))
 }
