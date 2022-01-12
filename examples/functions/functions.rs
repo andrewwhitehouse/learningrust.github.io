@@ -1,58 +1,11 @@
-//fn main() {
-//  println!("Hello world");
-//}
-
-// 1
-/*
-fn foo(n: i32) -> i32 {
-  if n > 0 {
-    return n * 3;
-  } else {
-    return n * 2;
-  }
+fn add(a: i32, maybe_b: Option<i32>, maybe_c: Option<i32>) -> i32{
+  let b = if maybe_b.is_none() { 0 } else { maybe_b.unwrap() };
+  let c = if maybe_c.is_none() { 0 } else { maybe_c.unwrap() };
+  a + b + c
 } 
 
 fn main() {
-  println!("{} {}", foo(-23), foo(5));
-}
-*/
-
-// 2
-/*
-fn foo(n: i32) -> i32 {
-  if n > 0 {
-    n * 3;
-    println!("Tripled");
-  } else {
-    n * 2;
-    let x = n * 2;
-  }
-} 
-
-fn main() {
-  println!("{} {}", foo(-23), foo(5));
-}
-*/
-
-// 3
-/*
-fn foo(n: i32) -> i32 {
-  let ret = if n > 0 { n * 3 } else { n * 2 };
-  println!("Foo returns {}", ret);
-  ret
-} 
-
-fn main() {
-  println!("{} {}", foo(-23), foo(5));
-}
-*/
-
-// 4
-fn hello(who: Option<&str>) -> String {
-  format!("Hello {}", if who.is_none() { "world" } else { who.unwrap() } );
-} 
-
-fn main() {
-  println!("{}", hello(None));
-  println!("{}", hello(Some("again"));
+  println!("{}", add(3, None, None));
+  println!("{}", add(3, Some(8), None));
+  println!("{}", add(3, Some(8), Some(6)));
 }
