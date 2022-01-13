@@ -177,7 +177,7 @@ Ten ...
     }
 ```
 
-(Test should fail.)
+(Check the test fails. Then fix it.)
 
 ```
 } else if n % 5 == 0 {
