@@ -1,8 +1,11 @@
 pub fn fizzbuzz(n: u64) -> String {
     let is_multiple_of_3 = n % 3 == 0;
-    if is_multiple_of_3 {
+    let is_multiple_of_5 = n % 5 == 0;
+    if is_multiple_of_3 && is_multiple_of_5 {
+        "fizzbuzz".to_string()
+    } else if is_multiple_of_3 {
         "fizz".to_string()
-    } else if n % 5 == 0 {
+    } else if is_multiple_of_5 {
         "buzz".to_string()
     } else {
         n.to_string()
@@ -46,5 +49,10 @@ mod tests {
     #[test]
     fn it_returns_fizzbuzz_for_15() {
         assert_eq!(fizzbuzz(15), "fizzbuzz");
+    }
+
+    #[test]
+    fn it_returns_fizzbuzz_for_30() {
+        assert_eq!(fizzbuzz(30), "fizzbuzz");
     }
 }
