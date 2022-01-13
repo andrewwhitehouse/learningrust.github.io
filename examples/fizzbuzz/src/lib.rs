@@ -1,8 +1,13 @@
+pub fn fizzbuzz(n: u64) -> String {
+  "".to_string()
+}
+
 #[cfg(test)]
 mod tests {
+    use super::*;
+
     #[test]
-    fn it_works() {
-        let result = 2 + 2;
-        assert_eq!(result, 4);
+    fn it_returns_the_as_a_string() {
+        assert_eq!(fizzbuzz(1), "1");
     }
 }
