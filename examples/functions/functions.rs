@@ -1,5 +1,7 @@
 fn fib_recur(n: usize) -> u64 {
+    //print!("fib_recur({}) ", n);
     if n < 2 {
+       //println!();
        return n as u64
     }
     fib_recur(n-1) + fib_recur(n-2)
@@ -20,7 +22,12 @@ fn fib_iter(n: usize) -> u64 {
 }
 
 fn main() {
+  // println!("{}", fib_iter(90));
+  println!("{}", fib_recur(42));
+
+  /*
   for n in 0..=25 {
     println!("{} {}", n, fib_recur(n))
   }
+  */
 }

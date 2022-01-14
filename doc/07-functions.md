@@ -144,6 +144,9 @@ fn main() {
 
 Fix the function parameters so that the function correctly prints the first 26 numbers.
 
+2. Rust is quick, but you'll see a noticeable difference between the speed of the iterative and recursive solutions if you use higher values. Compare the run times, starting from around n=40; which is quicker, and why?
+
 [details="Answers"]
-The last line of `fib_recur` should read `fib_recur(n-1) + fib_recur(n-2)`
+1. The last line of `fib_recur` should read `fib_recur(n-1) + fib_recur(n-2)`
+2. The recursive solution is slower because it repeatedly calculates the same values over and over. 
 [/details]
