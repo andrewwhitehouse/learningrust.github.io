@@ -102,49 +102,49 @@ Exercises:
 
 1. We previously wrote a [Fibonacci](https://en.wikipedia.org/wiki/Fibonacci_number) function that used an array to return multiple values. We could have simplified it ti use a single value, like this:
 
-```
-fn fib_iter(n: usize) -> u64 {
-    if n == 0 {
-       return 0
+   ```
+   fn fib_iter(n: usize) -> u64 {
+       if n == 0 {
+           return 0
+       }
+       let mut a: u64 = 0;
+       let mut b: u64 = 1;
+       for _index in 1..n {
+           let tmp = b;
+           b = a + b;
+           a = tmp;
+       }
+       b
     }
-    let mut a: u64 = 0;
-    let mut b: u64 = 1;
-    for _index in 1..n {
-        let tmp = b;
-        b = a + b;
-        a = tmp;
+
+    fn main() {
+       for n in 0..=25 {
+           println!("{} {}", n, fib_iter(n))
+       }
     }
-    b
-}
+   ```
 
-fn main() {
-  for n in 0..=25 {
-    println!("{} {}", n, fib_iter(n))
-  }
-}
-```
+   Here is a recursive implementation:
 
-Here is a recursive implementation:
+   ```
+   fn fib_recur(n: usize) -> u64 {
+      if n < 2 {
+         return n as u64
+      }
+      // FIXME
+      fib_recur(0) + fib_recur(0)
+   }
 
-```
-fn fib_recur(n: usize) -> u64 {
-    if n < 2 {
-       return n as u64
-    }
-    // FIXME
-    fib_recur(0) + fib_recur(0)
-}
+   fn main() {
+      for n in 0..=25 {
+         println!("{} {}", n, fib(n))
+      }
+   }
+   ```
 
-fn main() {
-  for n in 0..=25 {
-    println!("{} {}", n, fib(n))
-  }
-}
-```
+   Fix the function parameters so that the function correctly prints the first 26 numbers.
 
-Fix the function parameters so that the function correctly prints the first 26 numbers.
-
-2. Rust is quick, but you'll see a noticeable difference between the speed of the iterative and recursive solutions if you use higher values. Compare the run times, starting from around n=40; which is quicker, and why?
+2. Rust is quick, but you'll see a noticeable difference between the speed of the iterative and recursive solutions if you use higher values. Compare the run times, starting from around n=40. Which is quicker, and why? 
 
 [details="Answers"]
 1. The last line of `fib_recur` should read `fib_recur(n-1) + fib_recur(n-2)`
