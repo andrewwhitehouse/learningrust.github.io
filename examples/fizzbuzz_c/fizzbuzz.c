@@ -21,7 +21,7 @@ char *fizzbuzz(unsigned long long n) {
   if (n % 5 == 0) {
     return "buzz";
   }
-  char ret[20];
+  char *ret = malloc(numDigits(n)+1);
   sprintf(ret, "%llu", n);
   return &ret[0]; 
 }
