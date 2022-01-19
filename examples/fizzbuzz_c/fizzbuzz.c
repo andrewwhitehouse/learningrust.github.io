@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int numDigits(unsigned long long n) {
   int result = 0;
@@ -20,13 +21,20 @@ char *fizzbuzz(unsigned long long n) {
   if (n % 5 == 0) {
     return "buzz";
   }
-  char *ret = malloc(numDigits(n)+1);
+  char ret[20];
   sprintf(ret, "%llu", n);
-  return ret; 
+  return &ret[0]; 
+}
+
+void allocateSomethingElse() {
+  char unused[100000];
+  memset(unused, 'x', sizeof(unused)/sizeof(char));
 }
 
 int main() {
-  puts(fizzbuzz(15));
-  puts(fizzbuzz(123456789));
-  puts(fizzbuzz(12387812162387));
+  char *result1 = fizzbuzz(123456789);
+  char *result2 = fizzbuzz(12387812162387);
+  char *result3 = fizzbuzz(12345689);
+  allocateSomethingElse();
+  printf("1 [%s] 2 [%s] 3[%s]\n", result1, result2, result3);
 }
