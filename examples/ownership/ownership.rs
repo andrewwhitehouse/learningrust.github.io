@@ -14,4 +14,6 @@ fn main() {
    let mut s = String::from("foo");
    s.push_str("bar");
    println!("{}", s);
+   let s2 = s;
+   println!("{}", s);
 }
