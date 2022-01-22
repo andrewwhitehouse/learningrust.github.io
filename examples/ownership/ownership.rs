@@ -10,10 +10,21 @@ fn main() {
 }
 */
 
+/*
+// This won't compile
 fn main() {
    let mut s = String::from("foo");
    s.push_str("bar");
    println!("{}", s);
    let s2 = s;
    println!("{}", s);
+}
+*/
+
+fn main() {
+   let mut s = String::from("foo");
+   s.push_str("bar");
+   println!("{}", s);
+   let s2 = s.clone();
+   println!("{} {}", s, s2);
 }
