@@ -31,14 +31,18 @@ fn main() {
 }
 */
 
-fn is_palindrome(s: String) -> bool {
+fn is_palindrome(s: String) -> (String, bool) {
     let reversed: String = s.chars().rev().collect();
-    reversed == s
+    let palindrome = reversed == s;
+    (s, palindrome)
 }
 
 fn main() {
     let word1 = String::from("minim");
     let word2 = String::from("Madam I'm Adam");
-    println!("{} is_palindrom? {}", word1, is_palindrome(word1));
-    println!("{} is_palindrom? {}", word2, is_palindrome(word2));
+    
+    let (w1, p1) = is_palindrome(word1);
+    let (w2, p2) = is_palindrome(word2);
+    println!("{} is_palindrom? {}", w1, p1);
+    println!("{} is_palindrom? {}", w2, p2);
 }
