@@ -39,10 +39,13 @@ fn is_palindrome(s: String) -> (String, bool) {
 
 fn main() {
     let word1 = String::from("minim");
-    let word2 = String::from("Madam I'm Adam");
+    let word2 = String::from("bathtub");
+    let word3 = String::from("Madam I'm Adam");
     
     let (w1, p1) = is_palindrome(word1);
     let (w2, p2) = is_palindrome(word2);
+    let (w3, p3) = is_palindrome(word3);
     println!("{} is_palindrom? {}", w1, p1);
     println!("{} is_palindrom? {}", w2, p2);
+    println!("{} is_palindrom? {}", w3, p3);
 }
