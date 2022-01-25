@@ -43,6 +43,8 @@ To work around this issue we can return the argument passed to the function, lik
     println!("{} is_palindrom? {}", w3, p3);
 ```    
 
+In the next section we'll learn about references, which will help us to avoid the complication of returning parameters as above.
+
 Exercises:
 
 1. Modify is_palindrome so that it returns a the tuple of type (String, bool) representing the word, and whether it is a palindrome.
