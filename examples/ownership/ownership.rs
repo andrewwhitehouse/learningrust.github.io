@@ -39,6 +39,6 @@ fn is_palindrome(s: String) -> bool {
 fn main() {
     let word1 = String::from("minim");
     let word2 = String::from("Madam I'm Adam");
-    println!("is_palindrom? {}", is_palindrome(word1));
-    println!("is_palindrom? {}", is_palindrome(word2));
+    println!("{} is_palindrom? {}", word1, is_palindrome(word1));
+    println!("{} is_palindrom? {}", word2, is_palindrome(word2));
 }
