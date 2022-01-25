@@ -31,12 +31,14 @@ fn main() {
 }
 */
 
-fn takes_ownership_of(s: String) {
-    println!("In takes_ownership_of s={}", s);
+fn is_palindrome(s: String) -> bool {
+    let reversed: String = s.chars().rev().collect();
+    reversed == s
 }
 
 fn main() {
-    let s = String::from("Giraffe");
-    takes_ownership_of(s);
-    println!("After function call s={}", s);
+    let word1 = String::from("minim");
+    let word2 = String::from("Madam I'm Adam");
+    println!("is_palindrom? {}", is_palindrome(word1));
+    println!("is_palindrom? {}", is_palindrome(word2));
 }
