@@ -32,8 +32,11 @@ fn main() {
 */
 
 fn is_palindrome(s: String) -> (String, bool) {
-    let reversed: String = s.chars().rev().collect();
-    let palindrome = reversed == s;
+    let mut normalized: String = s.chars().filter(|c| c.is_alphabetic()).collect();
+    normalized = normalized.to_lowercase();
+    println!("{}", normalized);
+    let reversed: String = normalized.chars().rev().collect();
+    let palindrome = reversed == normalized;
     (s, palindrome)
 }
 
