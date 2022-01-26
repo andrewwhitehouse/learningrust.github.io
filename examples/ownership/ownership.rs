@@ -48,7 +48,7 @@ fn main() {
     let (w1, p1) = is_palindrome(word1);
     let (w2, p2) = is_palindrome(word2);
     let (w3, p3) = is_palindrome(word3);
-    println!("{} is_palindrom? {}", w1, p1);
-    println!("{} is_palindrom? {}", w2, p2);
-    println!("{} is_palindrom? {}", w3, p3);
+    println!("{} is_palindrome? {}", w1, p1);
+    println!("{} is_palindrome? {}", w2, p2);
+    println!("{} is_palindrome? {}", w3, p3);
 }

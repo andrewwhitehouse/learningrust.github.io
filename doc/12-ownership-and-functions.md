@@ -12,9 +12,9 @@ fn main() {
     let word1 = String::from("minim");
     let word2 = String::from("bathtub");
     let word3 = String::from("Madam I'm Adam");   
-    println!("is_palindrom? {}", is_palindrome(word1));
-    println!("is_palindrom? {}", is_palindrome(word2));
-    println!("is_palindrom? {}", is_palindrome(word3));
+    println!("is_palindrome? {}", is_palindrome(word1));
+    println!("is_palindrome? {}", is_palindrome(word2));
+    println!("is_palindrome? {}", is_palindrome(word3));
 }
 ```
 
@@ -27,9 +27,9 @@ move out of `word1` occurs here
 Try it.
 
 ```
-    println!("{} is_palindrom? {}", word1, is_palindrome(word1));
-    println!("{} is_palindrom? {}", word2, is_palindrome(word2));
-    println!("{} is_palindrom? {}", word3, is_palindrome(word3));
+    println!("{} is_palindrome? {}", word1, is_palindrome(word1));
+    println!("{} is_palindrome? {}", word2, is_palindrome(word2));
+    println!("{} is_palindrome? {}", word3, is_palindrome(word3));
 ```
 
 To work around this issue we can return the argument passed to the function, like this:
@@ -38,9 +38,9 @@ To work around this issue we can return the argument passed to the function, lik
     let (w1, p1) = is_palindrome(word1);
     let (w2, p2) = is_palindrome(word2);
     let (w3, p3) = is_palindrome(word3);
-    println!("{} is_palindrom? {}", w1, p1);
-    println!("{} is_palindrom? {}", w2, p2);
-    println!("{} is_palindrom? {}", w3, p3);
+    println!("{} is_palindrome? {}", w1, p1);
+    println!("{} is_palindrome? {}", w2, p2);
+    println!("{} is_palindrome? {}", w3, p3);
 ```    
 
 In the next section we'll learn about references, which will help us to avoid the complication of returning parameters as above.
