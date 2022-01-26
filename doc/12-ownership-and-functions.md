@@ -43,6 +43,8 @@ To work around this issue we can return the argument passed to the function, lik
     println!("{} is_palindrome? {}", w3, p3);
 ```    
 
+***TODO***: include update function signature for is_palindrome here.
+
 In the next section we'll learn about references, which will help us to avoid the complication of returning parameters as above.
 
 Exercises:
