@@ -81,3 +81,5 @@ player 2 wins (rock blunts scissors); player 1 wins; draw
 [/details]
 
 
+
+Copyright (c) 2022 Andrew Whitehouse. All rights reserved.

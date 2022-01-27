@@ -84,3 +84,5 @@ fn is_palindrome(s: String) -> (String, bool) {
 ```
 
 [/details]
+
+Copyright (c) 2022 Andrew Whitehouse. All rights reserved.

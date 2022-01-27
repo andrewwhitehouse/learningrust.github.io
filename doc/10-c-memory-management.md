@@ -218,3 +218,5 @@ Heap, and stack.
 [/details]
 
 @london3 @wintreese  @Beaver 
+
+Copyright (c) 2022 Andrew Whitehouse. All rights reserved.

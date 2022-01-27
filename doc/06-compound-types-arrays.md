@@ -43,3 +43,4 @@ Exercises:
 2. 1.61803398875; the ratio of consecutive elements in the Fibonacci sequence tends towards this number, known as the [Golden Ratio](https://en.wikipedia.org/wiki/Golden_ratio) which has been studied for a long time and appears in art, architecture and nature.
 3. 3928413764606871165730
 [/details]   
+Copyright (c) 2022 Andrew Whitehouse. All rights reserved.

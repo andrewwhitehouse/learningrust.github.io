@@ -36,3 +36,5 @@ Exercise:
 
 1. Can you find how to set the precision of the centigrade that's printed so that it appears with one decimal place like this: "3.0 centigrade = 37.4 fahrenheit". Hint: look at the std::fmt docs https://doc.rust-lang.org/std/fmt/, and the precision section, then modify how the formatting arguments are represented.
 2. Can you use `format!` to assign the formatted string to a variable first, and then print the string converted to upper case? (Reference: https://doc.rust-lang.org/stable/std/string/struct.String.html#method.to_uppercase)
+
+Copyright (c) 2022 Andrew Whitehouse. All rights reserved.

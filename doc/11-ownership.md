@@ -85,3 +85,5 @@ Here are some of the types that implement Copy:
 [_hook for next post ..._]
 
 
+
+Copyright (c) 2022 Andrew Whitehouse. All rights reserved.

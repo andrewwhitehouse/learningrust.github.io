@@ -17,3 +17,5 @@ To install Rust, go to the [Rust website](https://www.rust-lang.org/tools/instal
 You can check the version you're running with `rustc --version`.
 
 If you already have Rust installed, you can update it with `rustup update`.
+
+Copyright (c) 2022 Andrew Whitehouse. All rights reserved.

@@ -49,3 +49,4 @@ Exercises:
 [details="Answer"]
 1. 97
 [/details]    
+Copyright (c) 2022 Andrew Whitehouse. All rights reserved.

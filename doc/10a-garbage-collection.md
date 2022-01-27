@@ -13,3 +13,5 @@ Increasingly sophisticated [approaches](https://www.freecodecamp.org/news/garbag
 Runtime objects are garbage collection when references to them are released; so it's important to ensure that object references are not retained unnecessarily (for example with a static HashMap in a class that maintains references to other objects, and it never clears). Objects that can't be released will lead to memory leaks, and processes possibly experiencing OutOfMemory errors.
 
 This small amount of background may help you to appreciate Rust's approach even more.
+
+Copyright (c) 2022 Andrew Whitehouse. All rights reserved.

@@ -89,3 +89,5 @@ Exercises:
 3. snake case
 4. :clap: 
 [/details]
+
+Copyright (c) 2022 Andrew Whitehouse. All rights reserved.

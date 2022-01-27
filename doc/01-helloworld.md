@@ -34,3 +34,5 @@ Exercises:
 
 1. Which Rust function is called when you execute a compiled programme?
 2. What is the preferred file extension for Rust files?
+
+Copyright (c) 2022 Andrew Whitehouse. All rights reserved.

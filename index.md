@@ -14,3 +14,5 @@
 * [Garbage Collection](./doc/10a-garbage-collection.md)
 * [Ownership](./doc/11-ownership.md)
 * [Ownership and Functions](./doc/12-ownership-and-functions.md)
+
+Copyright (c) 2022 Andrew Whitehouse. All rights reserved.

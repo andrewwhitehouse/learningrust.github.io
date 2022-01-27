@@ -113,3 +113,5 @@ fn main() {
 357/1411 simplified is 31/83
 
 [/details]
+
+Copyright (c) 2022 Andrew Whitehouse. All rights reserved.

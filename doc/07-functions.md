@@ -150,3 +150,5 @@ Exercises:
 1. The last line of `fib_recur` should read `fib_recur(n-1) + fib_recur(n-2)`
 2. The recursive solution is slower because it repeatedly calculates the same values over and over. 
 [/details]
+
+Copyright (c) 2022 Andrew Whitehouse. All rights reserved.

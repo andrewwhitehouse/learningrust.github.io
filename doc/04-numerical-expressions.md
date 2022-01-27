@@ -40,3 +40,4 @@ Exercises:
 [details="Answer"]
 1. 7578338
 [/details]
+Copyright (c) 2022 Andrew Whitehouse. All rights reserved.
