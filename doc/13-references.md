@@ -1,4 +1,4 @@
-References
+**References** (revised)
 
 ## Recap
 
@@ -43,7 +43,7 @@ We say that `&word1` borrows a reference to `word1`.
 
 Exercise:
 
-1. There is an intentional bug in the programme which prevents it from compiling successfully. _Hint: what is the type of a statement?_.
+1. There is an intentional bug in the programme which prevents it from compiling successfully. Can you fix it? _Hint: what is the type of a statement?_
 
 [details="Answer"]
 
