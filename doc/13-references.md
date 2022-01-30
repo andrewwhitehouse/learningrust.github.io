@@ -37,7 +37,7 @@ fn main() {
 }
 ```
 
-The `s` parameter passsed to `is_palindrome` is pronounced as `ref String`.
+The type of the `s` parameter passsed to `is_palindrome` is `&String`, pronounced as `ref String`.
 
 We say that `&word1` borrows a reference to `word1`. 
 
