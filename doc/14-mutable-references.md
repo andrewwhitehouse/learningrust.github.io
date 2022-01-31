@@ -7,41 +7,17 @@ We would also like to be able to change the data for which we have "borrowed" a 
 Here is a maze:
 
 ```
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
-|o|         |                     |
-* *-*-* * * *-*-* *-*-*-*-*-*-* *-*
-|       | |       |             | |
-*-*-*-* *-*-*-*-*-*-*-*-*-*-*-* * *
-|       |     |   | |   |       | |
-*-*-*-*-* *-* *-* * *-* *-*-*-* * *
-|   |   | |   | |             |   |
-*-* *-* *-*-* * * *-*-* *-*-* * * *
-|     |   |       |     |       | |
-*-*-* *-* *-*-*-* *-* * *-* *-*-* *
-| | |     |       |   | |   |   | |
-* * *-*-* *-*-* *-* * *-* *-*-* * *
-| |             |   | |   |       |
-* * * *-* *-*-* * *-* *-*-*-*-* * *
-|   | |   | | | | |   |         | |
-* * * * *-* * * *-* *-*-* * * * * *
-| | | | |       |   |     | | | | |
-* * * *-*-*-*-*-*-*-*-* *-* *-* *-*
-| | |   |                 |   |   |
-*-*-* * *-*-*-* * *-* * *-* *-* * *
-|     | |       | |   | |     | | |
-*-* * * * * * *-* * *-*-* * * * * *
-|   | | | | |   | |   |   | | | | |
-* *-* * *-*-*-* *-* *-* * * * * * *
-|   | | |         | |   | | | | | |
-* * * * * * *-* * *-*-*-*-* * * * *
-| | | | | | |   | | |       | | | |
-* * *-*-*-* * *-*-* *-* * *-* * *-*
-| |   |     | |         | |   |   |
-* * *-*-*-* *-*-*-*-*-* *-* * *-* *
-| | | | | | |           |   |   | |
-* * * * * *-*-* *-* *-* * *-* *-* *
-| | |           |   |   |   |   | |
-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+*-*-*-*-*-*
+|o        |
+*-* *-*-*-*
+| |       |
+* * *-*-* *
+| | |   | |
+* * * *-*-*
+|     |   |
+* *-* * *-*
+| |       |
+*-*-*-*-*-*
 ```
 
 We can traverse this maze using a [wall follower](https://en.wikipedia.org/wiki/Maze-solving_algorithm#Wall_follower) alorithm.
@@ -52,23 +28,30 @@ If we're travelling east, we try south, then east, then north, then west.
 
 Following this approach we end up with this path through the maze:
 
-*seeeswwweeennesneseeeneeeeeeeswwwwwweeeeeeswwweeesswnwwwnweswwnswnwesswnswnnwwsneeswesweeeswwweeswwwnnwnweseswwnwnwesweeseeswwwnsswnnssssnnessnnnesssswweswsssssnnnnessssnnewnnwnenesssnnnnessssnnnnwnnneeswsneneeesswnswnsweeennnenneeeswweswswsnenesswswenennnesnneeeswweswsweneneenessswnweswweeswwwweswweswwwwwwweeeswwwsnesneseswwwsnesswweesnnneeswsnenesnwnwnenessnneeswssnewnenesnewnenessswswswenesnnessswwweswwnswweeeeswwwwweswwwnswnswnseeeeeneesweneeswennnesnennnesssswswsewnenessewnewnnnnnwnewnnesnesssssssess*
+*essswnnsssneesweee*
 
 Not only is this rather hard to read, but because it is trying all possible routes it involves a fair amount of back-tracking.
 
 For example, after this route:
 
-*seeeswww* 
+*essswnn* 
 
 we reach a dead and and then have to backtrack
 
-*eeenn*
+*sss*
 
-and so on.
+and then again
+
+*ne*
 
 Let's simplify this route to give the most direct path through the maze.
 
 We can do this by modifying the original string.
+
+Note:
+
+essswnnsssneesweee
+simplified [:e :s :s :s :e :s :e :e]
 
 
 
