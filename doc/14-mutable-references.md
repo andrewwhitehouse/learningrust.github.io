@@ -28,11 +28,15 @@ If we're travelling east, we try south, then east, then north, then west.
 
 Following this approach we end up with this path through the maze:
 
+*east-south-south-south-west-...*
+
+which we can abbreviate with the initial letter:
+
 *essswnnsssneesweee*
 
-Not only is this rather hard to read, but because it is trying all possible routes it involves a fair amount of back-tracking.
+There are a few instances of back-tracking in this route:
 
-For example, after this route:
+For example, after:
 
 *essswnn* 
 
@@ -40,7 +44,7 @@ we reach a dead and and then have to backtrack
 
 *sss*
 
-and then again
+and then continue:
 
 *ne*
 
@@ -48,10 +52,72 @@ Let's simplify this route to give the most direct path through the maze.
 
 We can do this by modifying the original string.
 
-Note:
+```
+fn simplify(s: &mut String) {
+    let mut changed;
+    loop {
+       changed = false;
+       let backtrack = ["ns", "sn", "we"];
+       for removal in backtrack {
+           if s.contains(removal) {
+               changed = true;
+               *s = s.replace(removal, "");
+           }
+       }
+       if !changed {
+           break;
+       }
+    }
+}
 
-essswnnsssneesweee
-simplified [:e :s :s :s :e :s :e :e]
+fn main() {
+    let mut route = String::from("essswnnsssneesweee");
+    simplify(&mut route);
+    println!("{}", route);
+}
+```
+
+The algorithm continually removes directions that cancel each other out, until there are no more remaining.
+
+## Discussion
+
+[_Does this belong here? Or in a separate chapter?_]
+
+Mutable code modifies the data in-place. We could also implement this algorithm immutably, passing an immutable reference to `simplify()` and then returning the simplified value.
+
+What is better? A lawyers or software engineers might say: it depends.
+
+When writing your code with mutable data it may lead to reducing the memory footprint of your code. When you are manipulating large amounts of input this can be beneficial.
+
+However code that mutates values in place can be harder to follow so it's a good idea to localise the changes. 
+
+```
+    let route = String::from("essswnnsssneesweee");
+    let simplified = simplify(&route);
+```
+
+Is this easier to read? Maybe. When I'm in doubt, I optimise for readability first.
+
+The other observation I'd like to make is that this code works. But there may be a more elegant way to do it.
+
+This is in part because I'm limiting the number of new concepts I introduce in each chapter (while wanting to keep the exapmles interesting). 
+
+But it's working code. Start with code that solves the problem you have, and meets the requirements you've been given. And then make it better.
+
+And as I write this, I'm learning this language too. When you are learning a new language you may feel uneasy that you aren't doing it in the right way and that people will judge you, and say things that might make you feel stupid. That might happen. 
+
+But if it does, seek out friends, colleagues and communities who are supportive and encourage you.  Because we need people like you who make the effort to learn and get better. We're all on a journey of continuous learning, and everyone has to start somewhere.
+
+**Exercise**:
+
+What is the simplified route through the maze? Check it against the original.
+
+[details="Answer"]
+
+esssesee
+
+[/details]
+
 
 
 
