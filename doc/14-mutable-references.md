@@ -110,7 +110,7 @@ But if it does, seek out friends, colleagues and communities who are supportive 
 
 **Exercise**:
 
-What is the simplified route through the maze? Check it against the original.
+What is the simplified route through the maze? 
 
 [details="Answer"]
 
