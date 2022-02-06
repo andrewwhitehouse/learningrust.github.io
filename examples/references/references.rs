@@ -1,8 +1,7 @@
 fn is_palindrome(s: &String) -> bool {
-    let mut normalized: String = s.chars().filter(|c| c.is_alphabetic()).collect();
-    normalized = normalized.to_lowercase();
+    let mut normalized: String = s.chars().filter(|c| c.is_alphabetic()).collect().to_lowercase();
     let reversed: String = normalized.chars().rev().collect();
-    reversed == normalized;
+    reversed == normalized
 }
 
 fn main() {

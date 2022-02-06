@@ -1,3 +1,4 @@
+/*
 fn simplify(s: &mut String) {
     let mut changed;
     loop {
@@ -19,4 +20,22 @@ fn main() {
     let mut route = String::from("essswnnsssneesweee");
     simplify(&mut route);
     println!("{}", route);
+}
+*/
+
+/*
+fn main() {
+    let s = String::from("hello");
+
+    let r1 = &s;
+    let r2 = &s;
+    println!("{} {}", r1, r2);
+}
+*/
+
+fn main() {
+    let s = String::from("hello");
+
+    let r1 = &mut s;
+    println!("{} {}", r1, s);
 }
