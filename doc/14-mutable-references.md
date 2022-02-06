@@ -81,11 +81,9 @@ The algorithm continually removes directions that cancel each other out, until t
 
 ## Discussion
 
-[_Does this belong here? Or in a separate chapter?_]
-
 Mutable code modifies the data in-place. We could also implement this algorithm immutably, passing an immutable reference to `simplify()` and then returning the simplified value.
 
-What is better? A lawyers or software engineers might say: it depends.
+What is better? A lawyer or software engineer might say: it depends.
 
 When writing your code with mutable data it may lead to reducing the memory footprint of your code. When you are manipulating large amounts of input this can be beneficial.
 
@@ -103,10 +101,6 @@ The other observation I'd like to make is that this code works. But there may be
 This is in part because I'm limiting the number of new concepts I introduce in each chapter (while wanting to keep the exapmles interesting). 
 
 But it's working code. Start with code that solves the problem you have, and meets the requirements you've been given. And then make it better.
-
-And as I write this, I'm learning this language too. When you are learning a new language you may feel uneasy that you aren't doing it in the right way and that people will judge you, and say things that might make you feel stupid. That might happen. 
-
-But if it does, seek out friends, colleagues and communities who are supportive and encourage you.  Because we need people like you who make the effort to learn and get better. We're all on a journey of continuous learning, and everyone has to start somewhere.
 
 **Exercise**:
 
