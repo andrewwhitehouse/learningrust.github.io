@@ -1,10 +1,12 @@
-fn add(i: &i32, j: &i32) -> i32 {
-    *i + *j
+fn foo<'a, 'b>(_x: &'a u32, y: &'b u32) -> &'b u32 {
+    y
 }
 
 fn main() {
-    let a = 10;
-    let b = 20;
-    let res = add(&a, &b);
-    println!("{}", res);
+    let x = 12;
+    let z: &u32 = {
+        let y = 42;
+        foo(&x, &y)
+    };
+    println!("{}", z);
 }
