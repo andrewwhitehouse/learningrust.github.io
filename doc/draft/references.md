@@ -16,6 +16,7 @@ Mine:
 * [Robotics for Software Engineers](https://livebook.manning.com/book/robotics-for-software-engineers/chapter-2/v-1/147)
 * [PiWars](https://piwars.org/2022-competition/challenges/shepherds-pi/)
 * [NEAR smart contract in Rust](https://docs.near.org/docs/develop/contracts/rust/intro), and [here](https://learn.figment.io/tutorials/write-and-deploy-a-smart-contract-on-near)
+* [Write NFT contracts in Rust](https://learn.figment.io/tutorials/write-nft-contracts-in-rust)
 * [Polkadot/Sewup](https://medium.com/ethereum-on-steroids/dapps-building-blocks-for-web3-sewup-for-writing-ethereum-webassembly-in-rust-7f4812a49195) and [substrate](https://docs.substrate.io/tutorials/v3/) reference material.
 * Sewup was [used](https://github.com/second-state/sewup-rdb-example) at a [hackathon](https://slides.com/yanganto/writing-ethereum-webassembly-in-rust-iv-todo-app-with-sewup) in December 2021
 * [Generative Art in Rust](https://blog.abor.dev/p/making-generative-art-with-rust)
