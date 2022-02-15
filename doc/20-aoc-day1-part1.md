@@ -33,6 +33,8 @@ Here is what that flow looks like:
 
 ![Day 1 Part 1](images/day1_part1.png)
 
+Each of our functions is a _pure_ function, meaning that the function result depends only on the parameters; the same parameters give the same result. We write a _unit_ test for each function, which allows us to verify that each function is working as expected before moving onto the next. 
+
 ```
 fn count_increases(_depths: Vec<u32>) -> u32 {
     0     // Deliberately return wrong result so test fais
