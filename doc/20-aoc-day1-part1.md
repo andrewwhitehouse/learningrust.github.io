@@ -113,7 +113,7 @@ What does the [input data](https://adventofcode.com/2021/day/1/input) look like?
 196
 199
 204
-... followed by 195 more lines
+... followed by 1995 more lines
 ```
 
 Add a test for parsing.
