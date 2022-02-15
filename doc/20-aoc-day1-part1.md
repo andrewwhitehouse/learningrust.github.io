@@ -25,7 +25,7 @@ Here's what the directory should look like:
     └── main.rs
 ```
 
-The description gives us an example scenario, which we can use to take _Test-Driven Development_ flow.
+The description gives us an example scenario, which we can use to take _Test-Driven Development_ flow. Add this code to `main.rs`.
 
 ```
 fn count_increases(_depths: Vec<u32>) -> u32 {
