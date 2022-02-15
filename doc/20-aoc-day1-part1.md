@@ -12,6 +12,8 @@ If you want to follow along and complete the problems yourself, you'll need to s
 
 We use `cargo` to set up the project structure and run code.
 
+(To run these examples you'll need to install the Rust tools, by following the [installation instructions](https://doc.rust-lang.org/cargo/getting-started/installation.html).)
+
 `cargo init`
 
 Here's what the directory should look like:
