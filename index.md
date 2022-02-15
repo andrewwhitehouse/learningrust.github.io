@@ -17,5 +17,6 @@
 * [References](./doc/13-references.md)
 * [Mutable References](./doc/14-mutable-references.md)
 * [More Mutable References](./doc/15-more-mutable-references.md)
-
-Copyright (c) 2022 Andrew Whitehouse. All rights reserved.
+* [Lifetimes](./doc/16-lifetimes.md)
+* [More lifetimes](./doc/18-more-lifetimes.md)
+* [Learning through problem solving - Advent of Code](./doc/20-aoc-day1-part1.md) 
