@@ -25,7 +25,13 @@ Here's what the directory should look like:
     └── main.rs
 ```
 
-The description gives us an example scenario, which we can use to take _Test-Driven Development_ flow. Add this code to `main.rs`.
+The problem description gives us an example scenario, which we can use to take _Test-Driven Development_ flow. Add this code to `main.rs`.
+
+We can think of the solution as applying functions to data, first _parsing_ the input text into a type that our _domain logic_ can use more easily.
+
+Here is what that flow looks like:
+
+![Day 1 Part 1](images/day1_part1.png)
 
 ```
 fn count_increases(_depths: Vec<u32>) -> u32 {
