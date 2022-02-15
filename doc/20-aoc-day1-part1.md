@@ -224,5 +224,5 @@ fn parse(input: String) -> Vec<u32> {
 
 My result gives `1342`. You may get a different result as the inputs can be different for different people.
 
-That's part 1 done!
+That's part 1 done! Once we've solved it the Advent of Code site reveals part 2 ...
 
