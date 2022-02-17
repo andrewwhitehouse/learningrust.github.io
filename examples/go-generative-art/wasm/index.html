@@ -1,0 +1,18 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+    function getWorker() {
+      let worker = new window.Worker('go_worker.js');
+      worker.addEventListener("message", async (event) => {
+        if (event.data.log !== undefined) {
+          console.log(event.data.log)
+        }
+      });
+      return worker;
+    }
+    let worker = getWorker();
+</script>
+</body>
+</html>
