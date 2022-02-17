@@ -193,5 +193,3 @@ undefined
 I now have a slightly better mental model of how the pieces fit together to produce something that works, and I can "kick the tyres".
 
 In the next post I'm going to see if I can access a smart contract running in a WebAssembly virtual machine, based on [these instructions](https://docs.secondstate.io/devchain/getting-started/run-an-ewasm-smart-contract).
-
-@beaver @london3
