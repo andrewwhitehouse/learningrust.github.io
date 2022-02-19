@@ -43,6 +43,10 @@ $ ./wasm-objdump --version
 $  
 ```
 
+WebAssembly supports only four data types: i32, i64, f32 and f64. 
+
+WebAssembly uses a _stack machine_ model where instructions are added to the top of the stack, and any operations are applied to the values on the stack. For example, to add two numbers you push then onto the top of the stack, and then push an _ADD_ operation onto the stack. The instruction and the two preceding values are `popped` off the stack and the result is calculated and pushed back onto the top of the stack.
+
 Create add1.wat
 
 ```
