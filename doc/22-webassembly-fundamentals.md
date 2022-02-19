@@ -4,7 +4,7 @@ As I read on past the Go example I started last time, it turns out that the wasm
 
 >While those functions will indeed execute in different goroutines, the WASM runtime is still single-threaded. While I/O-bound functions will still work in an async fashion, ours are almost entirely CPU-bound. One possible way to solve the issue is to spawn sub-Workers from the main one, which the Go app will post the progress to, but it is very complex, and out of the scope of this book. 
 
-So I'm going back to following the book _Programming WebAssembly with Rust_. My plan is to find good example and then reverse engineer the explanation so it's just enough to explain what's going on.
+So I'm going back to following the book _Programming WebAssembly with Rust_ and the [Rust and WebAssembly](https://rustwasm.github.io/docs/book/reference/deploying-to-production.html) book, which is open source. My plan is to find good examples and then reverse engineer the explanation so it's just enough to explain what's going on.
 
 It starts by covering the fundamentals; not generating WebAssembly files from Rust, but coding in the human-readable `wat` format, which looks like LISP.
 
