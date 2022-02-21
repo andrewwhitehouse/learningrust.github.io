@@ -1,5 +1,7 @@
 [_Excerpts from the book Programming WebAssembly with Rust. For reference only. Needs to be adapted significantly._]
 
+[_This example demonstrates how to generate a WebAssembly file from Rust, which we can then inspect using wasm-objdump._]
+
 We're going to see how combining Rust with WebAssembly allows us to add strong types, memory safety and more expressive code. 
 
 The Rust language has a longer learning curve than other languages like Go. ***You might want to start skimming through the official Rust book to get familiar with some of the syntax coming up in the book.***
