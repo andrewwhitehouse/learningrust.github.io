@@ -21,3 +21,6 @@
 * [More lifetimes](./doc/18-more-lifetimes.md)
 * [Learning through problem solving - Advent of Code](./doc/20-aoc-day1-part1.md) 
 * [AOC 2021 Day 1 in Rust](./doc/32-aoc2021-part1.md)
+* [AOC 2021 Day 1 Part 2](./doc/33-aoc2021-part2.md)
+* [Learning problems by problem solving](./doc/34-learning-by-solving-problems.md)
+* [Day 2 setup](./doc/35-day2.md)
