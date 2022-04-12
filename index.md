@@ -24,3 +24,4 @@
 * [AOC 2021 Day 1 Part 2](./doc/33-aoc2021-part2.md)
 * [Learning problems by problem solving](./doc/34-learning-by-solving-problems.md)
 * [Day 2 setup](./doc/35-day2.md)
+* [Day 3 initial](./doc/37-day3.md)
