@@ -103,8 +103,6 @@ I'm wondering how likely I am to encounter these issues. Or whether the code wil
 
 [_My thinking is to capture these thoughts now and then return to them later._]
 
-@beaver @london3
-
 
 
 

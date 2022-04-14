@@ -1,4 +1,6 @@
-https://www.youtube.com/watch?v=coQ5dg8wM2o
+# Build a Blockchain Application
+
+[YouTube](https://www.youtube.com/watch?v=coQ5dg8wM2o) [article](http://dappuniversity.com/articles/blockchain-app-tutorial)
 
 awwapp.com
 
@@ -13,11 +15,11 @@ All of the code on the blockchain is contained in smart contracts. Smart contrac
 
 Build a client-side application in HTML, CSS and JavaScript.
 
-Install Node.js; check with `node -v`.
+Install Node.js; check with `node -v`. Node.js allows us to build applications using JavaScript.
 
 Install [Ganache](https://trufflesuite.com/ganache/), which is a personal blockchain. Download the app, install and run it.
 
-Ganache runs on your local machine and makes it easier to develop and test blockchain applications locally.
+Ganache runs on your local machine and makes it easier to develop and test blockchain applications locally; it runs on your local machine so you avoid issues with connecting to remote sites, and you also control how the local server behaves (as well as not havin g to pay any blockchain transaction fees).
 
 The Truffle framework is a suite of tools that allow us to develop smart contracts, write tests against the smart contracts, deploy smart contracts to the blockchain  ... it gives us a devleopment console and it also allows us to develop client-side applications inside our project.
 
@@ -259,14 +261,7 @@ Now run the migration
 
 ```
 $ truffle migrate
-This version of µWS is not compatible with your Node.js build:
-
-Error: node-loader:
-Error: Module did not self-register: '/Users/andrewwhitehouse/.nvm/versions/node/v12.16.1/lib/node_modules/truffle/node_modules/ganache/dist/node/3wfpWiF8.node'.
-Falling back to a NodeJS implementation; performance may be degraded.
-
-
-
+$ truffle migrate
 
 Compiling your contracts...
 ===========================
@@ -280,34 +275,33 @@ Starting migrations...
 > Block gas limit: 6721975 (0x6691b7)
 
 
-. . .
+4_deploy_contracts0.js
+======================
 
-
-2_deploy_contracts.js
-=====================
-
-   Replacing 'Migrations'
-   ----------------------
-   > transaction hash:    0x0568e44a50b8ba9ca6aeb8bc609fd01c84d47cbe89f6be1df013d2f6518a9c58
+   Deploying 'TodoList'
+   --------------------
+   > transaction hash:    0x064fdb265043d6ec40c6aeacd6fd64c0757f8b6682ffd265f63d4162567e5d12
    > Blocks: 0            Seconds: 0
-   > contract address:    0x34724557c87Cec24a699CBB6d36e0D2B81d1875A
-   > block number:        3
-   > block timestamp:     1645960502
-   > account:             0xD51453Cc710A4623fB912fcde03C40B6ADff38A5
-   > balance:             99.98919606
-   > gas used:            248842 (0x3cc0a)
-   > gas price:           20 gwei
+   > contract address:    0x6314Cc6dF4703364e54a44c6c0a9429BEcf55185
+   > block number:        7
+   > block timestamp:     1645962605
+   > account:             0x2600dFE1136f367Cc5674218694DD457D2b5193E
+   > balance:             99.98087988
+   > gas used:            81941 (0x14015)
+      > gas price:           20 gwei
    > value sent:          0 ETH
-   > total cost:          0.00497684 ETH
+   > total cost:          0.00163882 ETH
+
    > Saving migration to chain.
    > Saving artifacts
    -------------------------------------
-   > Total cost:          0.00497684 ETH
+   > Total cost:          0.00163882 ETH
 
 Summary
 =======
-> Total deployments:   2
-> Final cost:          0.00995368 ETH
+> Total deployments:   1
+> Final cost:          0.00163882 ETH
+
 
 $
 ```
@@ -316,53 +310,11 @@ After deployment the balance of the first account has reduced by a little. That'
 
 Now let's use the Truffle console to retrieve the contract.
 
-`$ truffle console`
-
-(got an error)
-
-`nvm use v14.17.5`	
-	
-`npm rebuild`
-
-`npm install -g truffle`
-
-`truffle compile`
-
-`truffle migrate`
-
-`truffle console`
-
 ```
 $ truffle console
-truffle(development)> todoList = await TodoList.deployed()
-Uncaught:
-Error: TodoList has not been deployed to detected network (network/artifact mismatch)
-    at processTicksAndRejections (internal/process/task_queues.js:95:5)
-    at Function.deployed (/Users/andrewwhitehouse/.nvm/versions/node/v14.17.5/lib/node_modules/truffle/build/webpack:/packages/contract/lib/contract/constructorMe
-thods.js:83:1)
-    at Object.checkNetworkArtifactMatch (/Users/andrewwhitehouse/.nvm/versions/node/v14.17.5/lib/node_modules/truffle/build/webpack:/packages/contract/lib/utils/i
-ndex.js:256:1)
-truffle(development)>
-```
-
-Run 
-
-`truffle migrate --reset`
-
-Truffle console still doesn't work.
-
-https://stackoverflow.com/questions/48694192/contract-has-not-been-deployed-to-detected-network-network-artifact-mismatch-o
-
-Looks like I had an issue with my deployment, and the migration not being run again. I created another one and it worked.
-
-```
-truffle(development)> todoList = await TodoList.deployed()
-undefined
-truffle(development)>
-```
-
-```
-truffle(development)> todoList = await TodoList.deployed()
+truffle(development)> TodoList.isDeployed()
+true
+truffle(development)>truffle(development)> todoList = await TodoList.deployed()
 undefined
 truffle(development)> todoList.address
 '0x6314Cc6dF4703364e54a44c6c0a9429BEcf55185'
@@ -372,12 +324,49 @@ truffle(development)> taskCount.toNumber()
 0
 truffle(development)>
 ```	
-	
-	
-	
-	
-	For later
-	
+
+[_Note: if you have issues running contracts, or your migrations get confused, you can run truffle init again._]
+
+---
+
+## Part 2
+
+Steps
+
+1. List tasks in the smart contract
+2. List tasks in the console
+3. List tasks in the client side application
+4. List tasks in the test
+
+### List tasks in the smart contract
+
+We need a way to model the tasks in the smart contract.
+
+We can model the task with a `struct`.
+
+```
+struct Task {
+    uint id;
+    string content;
+    bool completed;
+}
+```
+
+And now we need a place to put these tasks.
+
+And we need somewhere to put these tasks. Let's create a mapping, which is a lot like an associative array.
+
+```
+mapping(uint => Task) public tasks;
+```
+
+Declaring it as public gives us a reader function for free.
+
+
+
+https://medium.com/stakingbits/setting-up-metamask-for-polygon-matic-network-838058f6d844
+
+https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key
 	
 ---	
 	

@@ -147,7 +147,78 @@ pub fn hello(name: &str) {
 }
 ```
 
-[_To be continued ..._]
+[_22nd February pm_]
+
+Build to check that it's valid:
+
+`$ cargo build --target wasm32-unknown-unknown`
+
+Running
+
+`$ wasm-bindgen target/wasm32-unknown-unknown/debug/bindgenhello.wasm --out-dir .`
+
+
+creates bindgenhello_bg.wasm, bindgenhello_bg.js, bindgenhello_bg.wasm.d.ts and bindgenhello.js in the current directory. 
+
+This is the wrapper function in bindgenhello_bg.js:
+
+```
+export function hello(name) {
+    var ptr0 = passStringToWasm0(name, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    var len0 = WASM_VECTOR_LEN;
+    wasm.hello(ptr0, len0);
+}
+```
+
+The memory offset and length of the allocated string are returned from a function called _passStringToWasm_. The function invokes the generated allocation function inside the WebAssembly module, placing the encoded string in the module's linear memory and then doing the relevant pointer arithmetic. Having written your own wast code, you should be able to appreciate how great it is to have this code generated on your behalf.
+
+[_The book also includes a box note about using Cargo Update. "Occasionally when you go to build a project that built successfully the week before, you may see weird errors in libraries that you didn't write. This happens sometimes with conflicts between locally cached builds and libraries pulled from the internet. Most of the time you should be able to resolve this by running cargo update and then attempting the build again. You may also be prompted to update the version if wasm-bindgen used in the CLI and in your .wasm module don't match._]
+
+With the WebAssembly side of this "Hello World" done, it's time to move on to the JavaScript side of the house.
+
+## Integrating with JavaScript and npm
+
+In order to run the sample in a browser you'll need a web server and some way of invokving your script content that invokes the wasm module. 
+
+The author mentions that the real work happens in the index.js; you get simple clean idomatic JavaScript, even though it's using a bridge to interface with a WebAssembly module.
+
+The book example was a bit funky, and involved faffing around with webpack, so I decided not to do that.
+
+Instead I followed this:
+
+https://wasmbyexample.dev/examples/hello-world/hello-world.rust.en-us.html
+
+`cargo install wasm-pack`
+
+`wasm-pack build --target web`
+
+`wasm-bindgen ​​ ​target/wasm32-unknown-unknown/debug/bindgenhello.wasm ​​ ​​--out-dir ​​pkg` ​ 
+
+https://rustwasm.github.io/book/game-of-life/hello-world.html
+
+796  cd bindgenhello/
+  797  cargo init --lib
+  798  cargo install wasm-pack
+  
+<screech ...!>  
+  
+---
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
 
 
 

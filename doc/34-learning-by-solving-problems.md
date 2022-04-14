@@ -22,4 +22,3 @@ If the modern "devil" is [cheap dopamine](https://www.youtube.com/watch?v=OGwefB
 
 So, solving problems that aren't simply toy problems; that have some relationship to how professionals build software. And is rewarding, and valuable, and sustainable. That's a type of idiosyncrasy that I've recognised and plan to explore more.
 
-@Beaver 

@@ -143,5 +143,4 @@ $
 
 This was a useful exercise. However as I read the rest of the chapter I'm underwhelmed by the result; it's a set of functions which simulate moves on a checker board, applying rules, but with no UI. I'm going to park it here with what I have. The approach to testing should be useful with other examples.
 
-@beaver
 

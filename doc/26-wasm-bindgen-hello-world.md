@@ -133,4 +133,3 @@ package.json
 
 produces a popup that says "Hello World!!".
 
-@Beaver 
