@@ -19,6 +19,8 @@
 * [More Mutable References](./doc/15-more-mutable-references.md)
 * [Lifetimes](./doc/16-lifetimes.md)
 * [More lifetimes](./doc/18-more-lifetimes.md)
+ 
+## Advent of Code
 
 * [Learning through problem solving - Advent of Code](./doc/20-aoc-day1-part1.md) 
 * [AOC 2021 Day 1 in Rust](./doc/32-aoc2021-part1.md)
