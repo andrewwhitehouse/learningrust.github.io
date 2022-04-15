@@ -71,6 +71,22 @@ You can code in the browser with Remix.
 
 Truffle automatically uses Web3 under the hood.
 
+Metamask lets you interact with blockchain-based applications.
+
+Metamask also lets you connect to Polygon.
+
+step by step plan to master blockchain.
+
+Step 1 set up a cryptocurrency wallet, use the blockchain and see what it's like.
+
+Ether is expensive. Switch to Polygon.
+
+Purchase an NFT.
+
+Can buy an NFT on Polygon too.
+
+
+
 
 
 
